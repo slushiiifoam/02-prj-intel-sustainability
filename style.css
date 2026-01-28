@@ -110,7 +110,8 @@ header p {
   justify-content: center;
   opacity: 0; /* Hidden at first */
   pointer-events: none; /* Can't interact when hidden */
-  border-radius: 12px;
+  /* Remove border-radius so overlay fully covers the card, including corners */
+  border-radius: 0;
   transition: opacity 0.3s;
   padding: 28px 20px; /* Match card padding for overlay */
   font-size: 1.08em; /* Slightly larger text for readability */
@@ -143,6 +144,7 @@ header p {
   }
   .card-overlay {
     padding: 18px 8px;
+    border-radius: 0; /* Also remove border-radius on small screens */
   }
 }
 
